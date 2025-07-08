@@ -1,7 +1,7 @@
 -- cola aqui a parte e vcs com um espaçamento das dos outros
 
 create table curso (
-	curso_id serial,
+	curso_id serial primary key,
 	nome_curso varchar (60),
 	descricao text,
 	duracao int,
@@ -9,7 +9,7 @@ create table curso (
 );
 
 create table categoria(
-	categoria_id serial,
+	categoria_id serial primary key,
 	nome_categoria varchar (30),
 	ultima_atualizacao timestamp
 );
@@ -21,7 +21,7 @@ create table curso_categoria(
 );
 
 create table planos (
-	planos_id serial,
+	planos_id serial primary key,
 	nome_plano char(6),
 	vencimento time, 
 	valor numeric (6, 2),
@@ -29,7 +29,7 @@ create table planos (
 );
 
 create table pagamento(
-	pagamento_id serial,
+	pagamento_id serial primary key,
 	planos_id int,
 	dia_pagamento time, 
 	usuario_id int,
@@ -37,7 +37,7 @@ create table pagamento(
 );
 
 create table usuario (
-	usuario_id serial,
+	usuario_id serial primary key,
 	planos_id int,
 	curso_id int,
 	nome_usuario char (30),
@@ -50,7 +50,7 @@ create table usuario (
 );
 
 create table video_aula (
-	video_aula_id serial,
+	video_aula_id serial primary key,
 	curso_id int, 
 	nome_video_aula varchar(30)
 );
