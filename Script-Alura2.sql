@@ -18,11 +18,11 @@ create table curso_categoria(
 	ultima_atualizacao timestamp
 );
 
-create table planos(
+create table planos (
 	planos_id serial,
 	nome_plano char(6),
 	vencimento time, 
-	valor (7,2),
+	valor numeric (6, 2),
 	ultima_atualizacao timestamp
 );
 
@@ -36,22 +36,19 @@ create table pagamento(
 
 create table usuario (
 	usuario_id serial,
+	planos_id int,
+	curso_id int,
 	nome_usuario char (30),
 	sobrenome char (30),
 	email varchar (50),
 	senha varchar (30),
 	data_de_criacao date,
+	cpf char(11),
 	ultima_atualizacao timestamp
 );
 
 create table video_aula (
 	video_aula_id serial,
-	curso_id int,
+	curso_id int, 
 	nome_video_aula varchar(30)
-);
-
-create table login (
-	login_id serial,
-	cpf char(11),
-	
 );
