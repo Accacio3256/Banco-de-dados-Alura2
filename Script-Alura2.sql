@@ -54,3 +54,14 @@ create table video_aula (
 	curso_id int, 
 	nome_video_aula varchar(30)
 );
+
+
+--selects
+
+--select count(nome_usuario) as "quantidade de alunos" from usuario u;
+
+--select count(*) as "cursos disponiveis" from curso c;
+
+--select count(*) as "quantidade de planos em uso por clientes" from usuario u
+--inner join planos p
+--on u.planos_id = p.planos_id;
